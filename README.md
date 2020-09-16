@@ -39,7 +39,7 @@ node your-app.js | pino-seq --serverUrl http://localhost:5341 --apiKey 123456789
 To enable capture of output not formatted through pino use the `logOtherAs` parameter. It's possible to use different settings for STDOUT/STDERR like this, when using bash:
 
 ```shell
-node your-app.js 2> >(pino-seq --logOtherAs Error --serverUrl http://localhost:5341 --apiKey 1234567890) > >(pino-seq --logOtherAs Information --serverUrl http://localhost:5341 --apiKey 1234567890)
+node your-app.js 1> >(pino-seq --logOtherAs Information --serverUrl http://localhost:5341 --apiKey 1234567890) 2> >(pino-seq --logOtherAs Error --serverUrl http://localhost:5341 --apiKey 1234567890)
 ```
 
 ### In-process (stream) usage
